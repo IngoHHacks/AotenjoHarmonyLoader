@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarmonyLoaderAotenjo", "HarmonyLoaderAotenjo.csproj", "{03832FF3-18FE-497B-859E-32B663C47341}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Release and Copy to Mod Folder|Any CPU = Release and Copy to Mod Folder|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03832FF3-18FE-497B-859E-32B663C47341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03832FF3-18FE-497B-859E-32B663C47341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03832FF3-18FE-497B-859E-32B663C47341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03832FF3-18FE-497B-859E-32B663C47341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03832FF3-18FE-497B-859E-32B663C47341}.Release and Copy to Mod Folder|Any CPU.ActiveCfg = Release and Copy to Mod Folder|Any CPU
+		{03832FF3-18FE-497B-859E-32B663C47341}.Release and Copy to Mod Folder|Any CPU.Build.0 = Release and Copy to Mod Folder|Any CPU
+	EndGlobalSection
+EndGlobal
