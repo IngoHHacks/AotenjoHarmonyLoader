@@ -28,6 +28,7 @@ internal class Main
     {
         Logger.Log("Loading mods...");
         var mods = ModManager.Instance.loadedMods;
+        mods = DependencyResolver.SortModsByDependencies(mods);
         var numLibsLoaded = 0;
         var numModsLoaded = 0;
         foreach (var mod in mods)
