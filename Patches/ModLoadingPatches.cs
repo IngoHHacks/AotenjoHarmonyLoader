@@ -3,10 +3,14 @@
 [HarmonyPatch]
 internal class ModLoadingPatches
 {
-    [HarmonyPatch(typeof(ModLocalizationLoader), nameof(ModLocalizationLoader.LoadModLocalizations), [])]
+    private static bool _modsLoaded = false;
+    
+    [HarmonyPatch(typeof(UIArtifactCollectionView), nameof(UIArtifactCollectionView.RefreshContent))]
     [HarmonyPostfix]
-    public static void ModLocalizationLoader_LoadModLocalizations_Postfix()
+    public static void UIArtifactCollectionView_RefreshContent_Postfix()
     {
+        if (_modsLoaded) return;
         Main.Instance.LoadMods();
+        _modsLoaded = true;
     }
 }
