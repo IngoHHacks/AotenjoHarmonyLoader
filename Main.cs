@@ -1,5 +1,7 @@
 ﻿using Aotenjo.Console;
+using HarmonyLoaderAotenjo.ModLoading;
 using System.Reflection;
+using Object = UnityEngine.Object;
 
 namespace HarmonyLoaderAotenjo;
 
@@ -22,6 +24,10 @@ internal class Main
             HasLoadErrors = true;
             Logger.LogError($"Failed to apply Harmony patches: {e}");
         }
+        var loader = new GameObject("HarmonyLoaderAotenjo");
+        var ml = loader.AddComponent<HarmonyModLoader>();
+        ml.StartCoroutine(ml.DelayedLoadMods());
+        Object.DontDestroyOnLoad(loader);
     }
     
     internal void LoadMods()
