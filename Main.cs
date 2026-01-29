@@ -26,7 +26,7 @@ internal class Main
     
     internal void LoadMods()
     {
-        Logger.Log("Loading mods...");
+        Logger.Log("Loading Harmony mods...");
         var mods = ModManager.Instance.loadedMods;
         mods = DependencyResolver.SortModsByDependencies(mods);
         var numLibsLoaded = 0;
@@ -120,7 +120,7 @@ internal class Main
         if (numModsLoaded + numLibsLoaded > 0)
         {
             Logger.Log(
-                $"Finished loading mods. Loaded {numLibsLoaded} libraries and initialized {numModsLoaded} mods.");
+                $"Finished loading Harmony mods. Loaded {numLibsLoaded} libraries and initialized {numModsLoaded} mods.");
         }
         else
         {
